@@ -41,4 +41,4 @@ Actions:
 ## What to expect from the future?
 I intend to update the plugin as I use it, any suggestions and changes that make sense would be welcome in the project.
 
-Currently I described some ideas I have for the next updates, you can check them in the [issues tab](https://github.com/LucasArusiewicz/Easy-Interface/issues).
+Currently I described some ideas I have for the next updates, you can check them in the [issues tab](https://github.com/LucasArusiewicz/Easy-Interface/issues) or [project tab](https://github.com/users/LucasArusiewicz/projects/1).
