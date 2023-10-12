@@ -7,6 +7,7 @@ Interface validation plugin for GDScript with graphical editor on Godot 4.
 ## Motivation
 Have a simple and quick way to implement interfaces in GDScript.
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8Q28AR)
 
 ## Installation
 ### Asset Library (Pending)
