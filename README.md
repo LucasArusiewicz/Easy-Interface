@@ -1,4 +1,6 @@
+![icon](https://github.com/LucasArusiewicz/Easy-Interface/assets/13992129/79987f8a-a253-4784-ad8c-46287f3ef6b6)
 # Easy-Interface
+
 
 Interface validation plugin for GDScript with graphical editor on Godot 4.
 
