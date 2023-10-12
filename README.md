@@ -12,7 +12,7 @@ Have a simple and quick way to implement interfaces in GDScript.
 ### Asset Library (Pending)
 1. In Godot, open the `AssetLib` tab.
 2. Search for and select "Easy Interface".
-3. Download then install the plugin (be sure to only select the `easy_interface` directory).
+3. Download then install the plugin (be sure to only select the `easy_interfaces` directory).
 4. Enable the plugin inside `Project/Project Setttings/Plugins`.
 
 ### Github Main (Latest - Unstable)
