@@ -7,6 +7,23 @@ Interface validation plugin for GDScript with graphical editor on Godot 4.
 ## Motivation
 Have a simple and quick way to implement interfaces in GDScript.
 
+
+## Installation
+### Asset Library (Pending)
+1. In Godot, open the `AssetLib` tab.
+2. Search for and select "Easy Interface".
+3. Download then install the plugin (be sure to only select the `easy_interface` directory).
+4. Enable the plugin inside `Project/Project Setttings/Plugins`.
+
+### Github Main (Latest - Unstable)
+1. Download the latest [`main branch`](https://github.com/LucasArusiewicz/Easy-Interface/archive/refs/heads/main.zip).
+2. Extract the zip file and move the `addons/easy_interface` directory into project's root location.
+3. Enable the plugin inside `Project/Project Setttings/Plugins`.
+
+For more help,
+see [Godot's official documentation](https://docs.godotengine.org/en/stable/tutorials/plugins/editor/installing_plugins.html)
+
+
 ## How to use
 
 ### Step by step:
