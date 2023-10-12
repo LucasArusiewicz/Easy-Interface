@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://i1fjww5g8g15"]
+
+[ext_resource type="Texture2D" uid="uid://dix14t7vpq2pe" path="res://addons/easy_interfaces/icons/GuiClose.svg" id="1_y04v6"]
+[ext_resource type="Script" path="res://addons/easy_interfaces/components/ui_interface/draggable_panel/top_bar.gd" id="2_yeago"]
+
+[node name="DraggablePanel" type="VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 100.0
+offset_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TopBar" type="PanelContainer" parent="." node_paths=PackedStringArray("parent_root")]
+layout_direction = 3
+layout_mode = 2
+size_flags_vertical = 0
+mouse_default_cursor_shape = 6
+script = ExtResource("2_yeago")
+parent_root = NodePath("")
+
+[node name="Close" type="Button" parent="TopBar"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+icon = ExtResource("1_y04v6")
+flat = true
+
+[connection signal="mouse_entered" from="TopBar" to="TopBar" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TopBar" to="TopBar" method="_on_mouse_exited"]
+[connection signal="button_down" from="TopBar/Close" to="TopBar" method="_on_close_button_down"]

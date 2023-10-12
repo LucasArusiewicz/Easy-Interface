@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dy0kfmjtg6wle"]
+
+[ext_resource type="Script" path="res://addons/easy_interfaces/components/card_interface/removable_line_edit/removable_line_edit.gd" id="1_3io14"]
+[ext_resource type="Texture2D" uid="uid://dk4va7xi3oy1n" path="res://addons/easy_interfaces/icons/Remove.svg" id="2_caous"]
+
+[node name="RemovableLineEdit" type="HBoxContainer"]
+offset_right = 96.0
+offset_bottom = 31.0
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+script = ExtResource("1_3io14")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+expand_to_text_length = true
+context_menu_enabled = false
+caret_mid_grapheme = false
+
+[node name="Remove" type="Button" parent="."]
+layout_mode = 2
+icon = ExtResource("2_caous")
+
+[connection signal="button_down" from="Remove" to="." method="_on_remove_button_down"]

@@ -1,0 +1,111 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwy8weh82uksj"]
+
+[ext_resource type="Script" path="res://addons/easy_interfaces/components/inspector/main_panel.gd" id="1_vawoq"]
+[ext_resource type="Texture2D" uid="uid://soo5xif78qnl" path="res://addons/easy_interfaces/icons/Add.svg" id="2_unreo"]
+[ext_resource type="Texture2D" uid="uid://dix21q7q5qnao" path="res://addons/easy_interfaces/icons/Save.svg" id="3_b41ne"]
+
+[node name="MainPanel" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+script = ExtResource("1_vawoq")
+
+[node name="ToolBar" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="ToolBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ToolBar/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Container" type="HBoxContainer" parent="ToolBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NewInterface" type="Button" parent="ToolBar/MarginContainer/HBoxContainer/Container"]
+layout_mode = 2
+text = " New Interface"
+icon = ExtResource("2_unreo")
+alignment = 2
+
+[node name="Validate" type="Button" parent="ToolBar/MarginContainer/HBoxContainer/Container"]
+layout_mode = 2
+text = "Validate"
+
+[node name="Save" type="Button" parent="ToolBar/MarginContainer/HBoxContainer/Container"]
+layout_mode = 2
+text = " Save"
+icon = ExtResource("3_b41ne")
+
+[node name="Label" type="Label" parent="ToolBar/MarginContainer/HBoxContainer/Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Automatic saving and validation are under development, check the repository for more information."
+
+[node name="CanvasContainer" type="HBoxContainer" parent="ToolBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ToolBar/MarginContainer/HBoxContainer/CanvasContainer"]
+layout_mode = 2
+text = "Canvas Size   "
+
+[node name="Label2" type="Label" parent="ToolBar/MarginContainer/HBoxContainer/CanvasContainer"]
+layout_mode = 2
+text = "x:"
+
+[node name="x" type="SpinBox" parent="ToolBar/MarginContainer/HBoxContainer/CanvasContainer"]
+layout_mode = 2
+min_value = 2000.0
+max_value = 100000.0
+value = 2000.0
+
+[node name="Label3" type="Label" parent="ToolBar/MarginContainer/HBoxContainer/CanvasContainer"]
+layout_mode = 2
+text = "y:"
+
+[node name="y" type="SpinBox" parent="ToolBar/MarginContainer/HBoxContainer/CanvasContainer"]
+layout_mode = 2
+min_value = 2000.0
+max_value = 100000.0
+value = 2000.0
+
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollPanel" type="ScrollContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+follow_focus = true
+
+[node name="Container" type="Container" parent="Control/ScrollPanel"]
+custom_minimum_size = Vector2(2000, 2000)
+layout_mode = 2
+
+[connection signal="button_down" from="ToolBar/MarginContainer/HBoxContainer/Container/NewInterface" to="." method="_on_new_interface_button_down"]
+[connection signal="button_down" from="ToolBar/MarginContainer/HBoxContainer/Container/Validate" to="." method="_on_validate_button_down"]
+[connection signal="button_down" from="ToolBar/MarginContainer/HBoxContainer/Container/Save" to="." method="_on_save_button_down"]
+[connection signal="value_changed" from="ToolBar/MarginContainer/HBoxContainer/CanvasContainer/x" to="." method="_on_x_value_changed"]
+[connection signal="value_changed" from="ToolBar/MarginContainer/HBoxContainer/CanvasContainer/y" to="." method="_on_y_value_changed"]
