@@ -10,6 +10,8 @@ Have a simple and quick way to implement interfaces in GDScript.
 ### Step by step:
 - step 1: After installing and enabling the plugin, go to the "Easy Interface" tab.
 - step 2: Create and edit a new interface using the "new interface" button, by default there are two example interfaces.
+  
+  **Don't forget to save, the plugin still doesn't save automatically**
 - step 3: Go to the script that you want to implement the interface and add a constant named INTERFACES ([check the demo script](https://github.com/LucasArusiewicz/Easy-Interface/blob/main/demo.gd)).
 - step 4: Go back to the "Easy Interface" tab and click on the "Validate" button. This step is temporary, validation and automatic saving are still under development.
 
